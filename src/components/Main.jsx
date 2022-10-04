@@ -1,0 +1,46 @@
+import { addToCart, emptyCart, removeFromCart } from "../Redux/Action";
+import { useDispatch } from "react-redux";
+import productList from "../Redux/ProductAction";
+import { useSelector } from "react-redux";
+
+function Main() {
+  const dispatch = useDispatch();
+  const data = useSelector(state => state.productData)
+  console.warn("data in main component",data)
+  const product = {
+    name: "i Phone",
+    category: "mobile",
+    price: 10000,
+    color: "red",
+  };
+  return (
+    <div>
+    <div>
+      <button onClick={() => dispatch(addToCart(product))}>Add to cart</button>
+    </div>
+    <div>
+      <button onClick={() => dispatch(removeFromCart(product))}>remove from cart</button>
+    </div>
+    <div>
+      <button onClick={() => dispatch(emptyCart())}>empty cart</button>
+    </div>
+    <div>
+      <button onClick={() => dispatch(productList())}>get porduct list</button>
+    </div>
+    <div className="product-container">
+        {
+          data.map((item) => <div key={item.id} className="product-item">
+            <img src= {item.photo} alt = "photo"/>
+            <div>Name : {item.name}</div>
+            <div>Color : {item.color}</div>
+            <div>Company Name : {item.company_name}</div>
+            <div>Price : {item.price}</div>
+            <div>Category : {item.catagory}</div>
+          </div>)
+        }
+    </div>
+    </div>
+  );
+}
+
+export default Main;
