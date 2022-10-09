@@ -6,6 +6,7 @@ export const productData = (currentState = initialState, action) => {
 
   switch (action.type) {
 
+    //this is commented
     // case PRODUCT_LIST:
     //   console.warn("PRODUCT_LIST condtion ", action);
     //   return [action.data];

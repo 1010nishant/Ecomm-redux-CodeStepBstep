@@ -6,31 +6,105 @@
   height: 40vmin;
   pointer-events: none;
 }
+
+.logo {
+  float: left;
+  margin: 0;
+  padding: 20px;
+}
+
+.product-img {
+  height: 100px;
+}
+
 /* header style */
-.header{
+.header {
   background-color: orange;
   height: 100px;
 }
-.cart-div{
+
+.cart-div {
   float: right;
   margin: 30px;
   position: relative;
 }
-.cart-div img{
+
+.cart-div img {
   width: 30px;
 }
-.cart-div span{
+
+.cart-div span {
   background-color: green;
   border-radius: 100%;
   height: 20px;
   width: 20px;
-  position:absolute;
-  top:-10px;
-  right:0px;
+  position: absolute;
+  top: -10px;
+  right: 0px;
   color: #fff;
 }
 
 /* end header style */
+
+/* product ui */
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-item {
+  border: 1px solid #ccc;
+  margin: 20px;
+  padding: 20px;
+}
+
+/* end product ui */
+/* cart page style */
+.cart-page-container {
+  display: flex;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.cart-page-container table {
+  flex: 65%;
+  border-collapse: collapse;
+}
+
+.cart-page-container table td {
+  border: 1px solid #ccc;
+  padding: 15px;
+}
+
+.price-details {
+  flex: 35%;
+  margin: 0px 30px;
+}
+
+.price-details .adjust-price {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.price-details .adjust-price span {
+  font-size: 20px;
+}
+
+/* end cart page style */
+.search-box {
+  float: left;
+  width: 60%;
+  padding: 25px;
+}
+
+.search-box input {
+  width: 100%;
+  height: 30px;
+  padding-left: 10px;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -45,7 +119,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* font-size: calc(10px + 2vmin); */
   color: white;
 }
 
@@ -57,7 +131,80 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+/* coders gyaan */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 20px;
+  background: whitesmoke;
+}
+
+/* img {
+  height: 80px;
+} */
+
+.card {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.productsWrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  background: #764abc;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: #513282;
+}
+
+.heading {
+  padding: 25px 0;
+}
+
+.cartCount {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 40px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: black;
+  margin-left: 20px;
+}
+
+.cartCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  margin-bottom: 20px;
+  padding: 14px;
+  border-radius: 5px;
 }

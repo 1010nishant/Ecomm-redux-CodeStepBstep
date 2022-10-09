@@ -1,6 +1,6 @@
 import { ADD_TO_CART, REMOVE_FROM_CART, EMPTY_CART } from "./Constant";
 
-
+//reducers is for changing our state
 let initialState = [];
 export const cartData = (currentState = initialState, action) => {
   // if(action.type === ADD_TO_CART){
@@ -18,14 +18,15 @@ export const cartData = (currentState = initialState, action) => {
       return [action.data, ...currentState];
 
     case REMOVE_FROM_CART:
-        console.warn("REMOVE_FROM_CART condtion ", action);
-        currentState.length = currentState.length ? currentState.length-1 : currentState
-        return [...currentState];
+      console.warn("REMOVE_FROM_CART condtion ", action);
+      // currentState.length = currentState.length ? currentState.length-1 : currentState
+      currentState = currentState.filter((item) => item.id !== action.data)
+      return [...currentState];
 
     case EMPTY_CART:
-        console.warn("REMOVE_FROM_CART condtion ", action);
-        currentState = []
-        return [...currentState];
+      console.warn("REMOVE_FROM_CART condtion ", action);
+      currentState = []
+      return [...currentState];
 
 
     default:

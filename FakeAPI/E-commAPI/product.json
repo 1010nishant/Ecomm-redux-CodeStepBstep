@@ -1,0 +1,40 @@
+{
+    "products": [
+        {
+            "id": "1",
+            "name": "chair 11 pro",
+            "company_name": "goodrage",
+            "price": "1000",
+            "color": "silver",
+            "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS27WHDXw9h_TXi1Sw-y3wsDAD5xAaP0sj79rNgHnvNjCdDuloLB2cqhxE6qSir-HBKcp0&usqp=CAU",
+            "category": "appliance"
+        },
+        {
+            "id": "2",
+            "name": "dove shampoo",
+            "company_name": "dove",
+            "price": "500",
+            "color": "green",
+            "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy0aeao8a44VYr9e3Ff5eNohZxmW2JngKOoBVZfMq1KIZQOZtQSn9njDRtq8QAt9dkcpI&usqp=CAU",
+            "category": "beauty"
+        },
+        {
+            "id": "3",
+            "name": "vitamin pills",
+            "company_name": "amway",
+            "price": "1000",
+            "color": "brown",
+            "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS27WHDXw9h_TXi1Sw-y3wsDAD5xAaP0sj79rNgHnvNjCdDuloLB2cqhxE6qSir-HBKcp0&usqp=CAU",
+            "category": "health"
+        },
+        {
+            "id": "4",
+            "name": "shanti almond",
+            "company_name": "shanti",
+            "price": "2000",
+            "color": "yellow",
+            "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS27WHDXw9h_TXi1Sw-y3wsDAD5xAaP0sj79rNgHnvNjCdDuloLB2cqhxE6qSir-HBKcp0&usqp=CAU",
+            "category": "health"
+        }
+    ]
+}
